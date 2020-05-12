@@ -1,0 +1,47 @@
+﻿  game.cpp
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(43,17): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(48,18): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(53,20): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(58,19): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(63,17): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(78,18): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(141,62): warning C4244:  'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(141,62): warning C4244:         with
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(141,62): warning C4244:         [
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(141,62): warning C4244:             T=float
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(141,62): warning C4244:         ]
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(141,35): warning C4244:  'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(141,35): warning C4244:         with
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(141,35): warning C4244:         [
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(141,35): warning C4244:             T=float
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(141,35): warning C4244:         ]
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(145,25): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(145,19): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(154,61): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(154,31): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(170,47): warning C4244:  'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(170,47): warning C4244:         with
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(170,47): warning C4244:         [
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(170,47): warning C4244:             T=float
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(170,47): warning C4244:         ]
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(170,31): warning C4244:  'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(170,31): warning C4244:         with
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(170,31): warning C4244:         [
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(170,31): warning C4244:             T=float
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(170,31): warning C4244:         ]
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(178,28): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(177,47): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(349,18): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(561,36): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(561,30): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(564,31): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(564,26): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(621,30): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(621,25): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+  highscores.cpp
+  tetrimino.cpp
+  well.cpp
+  Generating Code...
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(644,13): warning C4326:  return type of 'main' should be 'int' instead of 'void'
+C:\Users\conta\source\repos\tetris\tetris\game.cpp(644,13): warning C4326: C:\Users\conta\source\repos\tetris\tetris\game.cpp(548) : warning C4715: 'Game::processGameOver': not all control paths return a value
+  tetris.vcxproj -> C:\Users\conta\source\repos\tetris\Debug\tetris.exe
