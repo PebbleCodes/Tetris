@@ -35,6 +35,7 @@ private:
 
 	int gameSpeed = 20;
 
+	static const string CONFIG_FILE;
 	string playerName;
 
 	int highscoresList[10];

@@ -11,6 +11,7 @@ class Highscore {
 private:
 	int highscores[10];
 	string names[10];
+	static const string HIGHSCORE_FILE;
 
 public:
 	Highscore();

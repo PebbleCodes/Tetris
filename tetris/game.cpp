@@ -11,6 +11,8 @@ The header file for game implementation
 
 using namespace std;
 
+const string Game::CONFIG_FILE = "../applicationdata/config.txt";
+
 Game::Game() {
 	tetriminoNext = NULL;
 	tetriminoInPlay = NULL;
@@ -545,6 +547,7 @@ bool Game::processGameOver() {
 		
 		window.display();
 	}
+	return false;
 }
 
 void Game::drawLevel(int rowsCleared, int top, int left) {
@@ -625,7 +628,7 @@ void Game::drawScore(int score, int top, int left) {
 
 void Game::getPlayerName() {
 	string name;
-	ifstream file("config.txt");
+	ifstream file(CONFIG_FILE);
 	int numLines = 0;
 	if (file.is_open()) {
 		while (getline(file, name)) {
@@ -641,7 +644,8 @@ void Game::getPlayerName() {
 	}
 }
 
-void main() {
+int main() {
 	Game game;
 	game.playGame();
+	return 0;
 }

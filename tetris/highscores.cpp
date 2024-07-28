@@ -6,6 +6,8 @@
 
 using namespace std;
 
+const string Highscore::HIGHSCORE_FILE = "../applicationdata/highscores.txt";
+
 Highscore::Highscore() {
 	for (int i = 0; i < 10; i++)
 		highscores[i] = 0;
@@ -23,7 +25,7 @@ void Highscore::printHighscores() {
 void Highscore::getHighscores() {
 	string number;
 	int result;
-	ifstream file("highscores.txt");
+	ifstream file(HIGHSCORE_FILE);
 	int i = 0;
 	if (file.is_open()) {
 		while (getline(file, number)) {
@@ -41,7 +43,7 @@ void Highscore::getHighscores() {
 
 void Highscore::getNames() {
 	string name;
-	ifstream file("highscores.txt");
+	ifstream file(HIGHSCORE_FILE);
 	int i = 0;
 	int numLines = 0;
 	if (file.is_open()) {
@@ -79,7 +81,7 @@ bool Highscore::addName(string playerName, int playerScore) {
 
 void Highscore::uploadData() {
 	ofstream file;
-	file.open("highscores.txt");
+	file.open(HIGHSCORE_FILE);
 	for (int i = 0; i < 10; i++) {
 		file << names[i] << endl;
 		file << highscores[i] << endl;

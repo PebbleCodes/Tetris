@@ -1,0 +1,5 @@
+*.o
+.DS_Store
+../applicationdata/
+../.DS_Store
+../.idea/

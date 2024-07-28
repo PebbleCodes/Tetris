@@ -16,10 +16,10 @@ using namespace std;
 Tetrimino::Tetrimino(int type) {
 	
 
-	//‘r’=red, ‘y’=yellow, ‘t’=teal, ‘b’=blue, ‘o’=orange, ‘g’=green, ‘p’=purple
+	//ï¿½rï¿½=red, ï¿½yï¿½=yellow, ï¿½tï¿½=teal, ï¿½bï¿½=blue, ï¿½oï¿½=orange, ï¿½gï¿½=green, ï¿½pï¿½=purple
 	char tColor[8] = { 'r', 'y', 't', 'b', 'o', 'g', 'p'};
 
-	Tetrimino::location = { 0,0 };
+	Tetrimino::location = Location();
 
 	// Tetrimino Initialization
 	int iTetrimino[][SIZE] = {
