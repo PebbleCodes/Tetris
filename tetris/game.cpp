@@ -11,8 +11,6 @@ The header file for game implementation
 
 using namespace std;
 
-const string Game::CONFIG_FILE = "../applicationdata/config.txt";
-
 Game::Game() {
 	tetriminoNext = NULL;
 	tetriminoInPlay = NULL;
@@ -21,6 +19,9 @@ Game::Game() {
 	gameWell = NULL;
 
 	score = 0;
+	gameSpeed = DEFAULT_GAME_SPEED;
+	soundVolume = DEFAULT_SOUND_VOLUME;
+	musicVolume = DEFAULT_MUSIC_VOLUME;
 
 	sf::Vector2i position = sf::Mouse::getPosition(window);
 
@@ -72,6 +73,8 @@ Game::Game() {
 	againInverse.loadFromFile("resources/yes_button_inverse.png");
 	no.loadFromFile("resources/no_button.png");
 	noInverse.loadFromFile("resources/no_button_inverse.png");
+	next.loadFromFile("resources/next_button.png");
+	nextInverse.loadFromFile("resources/next_button_inverse.png");
 
 	// load and set/play the game music
 	// song: Tetris Theme Song
@@ -90,6 +93,8 @@ Game::Game() {
 	noButton.setSize(sf::Vector2f(133, 50));
 	noButton.setPosition(257, 437);
 
+	nextButton.setSize(sf::Vector2f(133, 50));
+	nextButton.setPosition(257, 437);
 
 	window.create(
 		sf::VideoMode(LAYOUT_WINDOW_WIDTH, LAYOUT_WINDOW_HEIGHT),
@@ -260,7 +265,6 @@ int Game::level(int rowsCleared) {
 	else {
 		return currentLvl;
 	}
-	
 }
 
 void Game::playGame() {
@@ -280,10 +284,11 @@ void Game::playGame() {
 			gameState = TETRIS_GAME_OVER;
 		}
 		else if (gameState == TETRIS_GAME_OVER) {
+			sf::Time sleepTime = sf::seconds(0.1f);
+			sleep(sleepTime); // Sleep briefly to prevent any overlap in input
 			if (processGameOver() == true) {
 				gameState = TETRIS_PLAY;
-			}
-			else {
+			} else {
 				window.close();
 			}
 		}
@@ -304,7 +309,6 @@ void Game::processSplash() {
 				window.close();
 		}
 		sf::Vector2i position = sf::Mouse::getPosition(window);
-		//cout << position.x << ", " << position.y << endl;
 		if (position.x >= 257 && 
 			position.x <= 388 && 
 			position.y >= 437 && 
@@ -504,7 +508,6 @@ bool Game::processGameOver() {
 		}
 
 		sf::Vector2i position = sf::Mouse::getPosition(window);
-		//cout << position.x << ", " << position.y << endl;
 		if (position.x >= 257 &&
 			position.x <= 388 &&
 			position.y >= 437 &&
@@ -544,7 +547,7 @@ bool Game::processGameOver() {
 			window.setMouseCursor(normalCursor);
 			return true;
 		}
-		
+
 		window.display();
 	}
 	return false;
@@ -603,10 +606,31 @@ void Game::processHighscore() {
 		while (window.pollEvent(event)) {
 			if (event.type == sf::Event::Closed)
 				window.close();
-			
 		}
-		
-		
+
+		sf::Vector2i position = sf::Mouse::getPosition(window);
+		if (position.x >= 257 &&
+			position.x <= 388 &&
+			position.y >= 437 &&
+			position.y <= 485) {
+				window.setMouseCursor(clickCursor);
+				nextButton.setTexture(&nextInverse);
+		} else {
+			window.setMouseCursor(normalCursor);
+			nextButton.setTexture(&next);
+		}
+
+		window.draw(nextButton);
+
+		if (sf::Mouse::isButtonPressed(sf::Mouse::Left) &&
+			position.x >= 257 &&
+			position.x <= 388 &&
+			position.y >= 437 &&
+			position.y <= 485) {
+			window.setMouseCursor(normalCursor);
+			break;
+		}
+
 		window.draw(highscoreList);
 		window.display();
 	}

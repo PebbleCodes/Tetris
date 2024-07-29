@@ -22,6 +22,10 @@ const int LAYOUT_WINDOW_HEIGHT = 500;
 const int LAYOUT_BOARD_TOP     = 10;
 const int LAYOUT_BOARD_LEFT    = 200;
 const int BLOCK_SIZE_PIXELS    = 20;
+const int DEFAULT_GAME_SPEED   = 20;
+const int DEFAULT_SOUND_VOLUME = 0;
+const int DEFAULT_MUSIC_VOLUME = 0;
+const string CONFIG_FILE = "../applicationdata/config.txt";
 
 class Game {
 private:
@@ -33,16 +37,15 @@ private:
 	Tetrimino* tetriminoTemp;
 	Tetrimino* ghostBlock;
 
-	int gameSpeed = 20;
+	int gameSpeed;
 
-	static const string CONFIG_FILE;
 	string playerName;
 
 	int highscoresList[10];
 	string namesList[10];
 
-	int soundVolume = 0;
-	int musicVolume = 0;
+	int soundVolume;
+	int musicVolume;
 
 	enum GameState {
 		TETRIS_SPLASH = 0,
@@ -61,6 +64,7 @@ private:
 	sf::RectangleShape playButton;
 	sf::RectangleShape yesButton;
 	sf::RectangleShape noButton;
+	sf::RectangleShape nextButton;
 
 	// Cursors
 	sf::Cursor clickCursor;
@@ -81,6 +85,8 @@ private:
 	sf::Texture againInverse;
 	sf::Texture no;
 	sf::Texture noInverse;
+	sf::Texture next;
+	sf::Texture nextInverse;
 	sf::Texture gameOverBackground;
 
 	// Music
